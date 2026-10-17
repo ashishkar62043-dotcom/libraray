@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sanskar Library — 24×7 self study center. Explore shifts and contact the director.">
+<title>Sanskar Library | 24×7 Self Study Center</title>
+<style>
+:root{--orange:#ff6900;--ink:#171521;--muted:#686674;--cream:#fff8f2;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#fffefcdd;backdrop-filter:blur(12px);border-bottom:1px solid #eee}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.5px}.brand-mark{width:42px;height:42px;background:var(--orange);border-radius:14px;color:white;display:grid;place-items:center;font-size:22px}.brand span small{display:block;font-size:10px;letter-spacing:2px;color:var(--muted);margin-top:3px}
+nav{display:flex;align-items:center;gap:25px;font-size:14px;font-weight:700}nav a:hover{color:var(--orange)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 19px;border-radius:999px;background:var(--orange);color:white;font-weight:800;border:0;cursor:pointer;transition:.2s;box-shadow:0 8px 20px #ff69002b}.btn:hover{transform:translateY(-2px);background:#e85d00}.btn.dark{background:var(--ink);box-shadow:none}.menu{display:none;background:none;border:0;font-size:26px}
+.hero{padding:62px 0 68px;background:radial-gradient(circle at 88% 18%,#ffeadb 0,transparent 28%),linear-gradient(130deg,#fff 35%,#fff8f2 100%);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:45px}.eyebrow{display:inline-flex;gap:8px;align-items:center;background:#fff0e5;color:#b84800;padding:9px 13px;border-radius:30px;font-size:12px;font-weight:900;letter-spacing:1px;text-transform:uppercase}.dot{height:8px;width:8px;background:var(--orange);border-radius:50%}
+h1{font-size:clamp(44px,6vw,74px);line-height:.98;letter-spacing:-3px;margin:23px 0 18px}h1 .hindi{color:var(--orange);display:block;letter-spacing:-1px;font-size:1.08em}h1 .library{display:block;font-size:.78em;letter-spacing:-2px;margin-top:7px}
+.lead{color:var(--muted);font-size:18px;line-height:1.7;max-width:520px}.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:27px}.trust{display:flex;gap:22px;flex-wrap:wrap;margin-top:30px;color:#555260;font-size:13px;font-weight:700}.trust span{display:flex;align-items:center;gap:7px}.check{color:var(--orange);font-size:17px}
+.hero-card{position:relative;padding:16px;background:#fff;border-radius:32px;box-shadow:0 25px 70px #21172b18;border:1px solid #f1e8e1}.photo{min-height:350px;border-radius:24px;background:linear-gradient(145deg,#f8e8dd,#e5e5e8);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.photo:before{content:"";position:absolute;width:280px;height:280px;border:22px solid var(--orange);border-radius:50%;right:-40px;top:-50px;opacity:.95}.photo:after{content:"";position:absolute;width:180px;height:180px;border:12px solid #fff; border-radius:50%;left:-55px;bottom:-70px}
+.study-illustration{position:relative;z-index:1;width:78%;max-width:340px;text-align:center}.study-illustration .book{font-size:100px;line-height:1.1;filter:drop-shadow(0 10px 5px #0001)}.study-illustration strong{display:block;font-size:23px;margin-top:8px}.study-illustration p{color:#625f68;margin:8px 0 0}.floating{position:absolute;z-index:2;background:var(--ink);color:#fff;border-radius:18px;padding:15px 18px;box-shadow:0 12px 28px #17152130}.floating b{display:block;font-size:20px}.floating small{color:#ddd;display:block;margin-top:4px}.float-top{top:35px;left:-22px}.float-bottom{right:-15px;bottom:28px;background:var(--orange)}
+.section{padding:76px 0}.section.soft{background:var(--cream)}.section-head{text-align:center;max-width:650px;margin:0 auto 38px}.kicker{color:var(--orange);font-weight:900;font-size:12px;letter-spacing:2px;text-transform:uppercase}.section h2{font-size:clamp(30px,4vw,44px);letter-spacing:-1.5px;margin:12px 0}.section-head p{color:var(--muted);line-height:1.7;margin:0}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{padding:26px;border:1px solid #eee8e2;border-radius:22px;background:#fff}.feature-icon{width:48px;height:48px;display:grid;place-items:center;background:#fff0e5;border-radius:15px;font-size:24px}.feature h3{margin:18px 0 9px;font-size:19px}.feature p{margin:0;color:var(--muted);line-height:1.65;font-size:14px}
+.shifts{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.shift{border-radius:20px;padding:22px;background:#fff;border:1px solid #eee5dd;display:flex;gap:14px;align-items:flex-start}.shift-no{flex:0 0 43px;height:43px;display:grid;place-items:center;background:var(--ink);color:white;border-radius:13px;font-weight:900}.shift h3{margin:2px 0 6px;font-size:16px}.shift p{margin:0;color:var(--muted);font-size:14px}.shift .time{font-weight:800;color:var(--orange);margin-top:7px}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:stretch}.contact-copy{padding:34px;border-radius:25px;background:var(--ink);color:#fff}.contact-copy h2{font-size:36px;letter-spacing:-1.3px;margin:14px 0}.contact-copy p{color:#c8c6d0;line-height:1.7}.contact-line{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #ffffff20}.contact-line:last-child{border:0}.contact-line .ico{width:38px;height:38px;border-radius:12px;background:#ffffff16;display:grid;place-items:center}.contact-line small{display:block;color:#bcb9c7;margin-bottom:4px}.contact-line strong{overflow-wrap:anywhere}
+.form-card{padding:30px;border:1px solid #eee5dd;border-radius:25px;background:#fff;box-shadow:0 15px 45px #17152108}.form-card h3{font-size:24px;margin:0 0 7px}.form-card>p{color:var(--muted);font-size:14px;margin:0 0 22px}.field{margin:14px 0}.field label{display:block;font-weight:800;font-size:13px;margin-bottom:7px}.field input,.field select,.field textarea{width:100%;border:1px solid #e5e1e7;border-radius:12px;padding:13px 14px;font:inherit;outline:none;background:#fff}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--orange);box-shadow:0 0 0 3px #ff690018}.field textarea{resize:vertical;min-height:90px}.form-card .btn{width:100%}.note{font-size:12px;color:#85818d;margin-top:12px;line-height:1.5}
+footer{background:#100f17;color:#fff;padding:26px 0}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer-row p{margin:5px 0;color:#bdbac8;font-size:13px}.footer-links{display:flex;gap:18px;color:#dedce5;font-size:13px}
+@media(max-width:800px){nav{display:none;position:absolute;left:4%;right:4%;top:70px;background:white;padding:18px;border:1px solid #eee;border-radius:18px;box-shadow:0 15px 35px #0001;flex-direction:column;align-items:stretch}.menu{display:block}.nav .nav-cta{display:none}.hero{padding-top:40px}.hero-grid,.contact-grid{grid-template-columns:1fr}.hero-grid{gap:34px}.hero-card{max-width:560px;margin:auto;width:100%}.features{grid-template-columns:1fr 1fr}.shifts{grid-template-columns:1fr 1fr}.section{padding:60px 0}}
+@media(max-width:520px){h1{letter-spacing:-2px}.hero-actions .btn{width:100%}.trust{gap:12px}.photo{min-height:280px}.float-top{left:-7px}.float-bottom{right:-5px}.features,.shifts{grid-template-columns:1fr}.section{padding:52px 0}.contact-copy,.form-card{padding:24px}.footer-links{flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#home"><span class="brand-mark">स</span><span>SANSKAR LIBRARY<small>SELF STUDY CENTER</small></span></a>
+  <nav id="navlinks"><a href="#home">Home</a><a href="#facilities">Facilities</a><a href="#shifts">Study Shifts</a><a href="#contact">Contact</a></nav>
+  <a class="btn nav-cta" href="tel:9153821747">☎ Call Now</a>
+  <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+ </div>
+</header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+ <div>
+  <div class="eyebrow"><span class="dot"></span> Open 24 hours · 7 days</div>
+  <h1><span class="hindi">संस्कार</span><span class="library">LIBRARY</span></h1>
+  <p class="lead">Your focus. Your goals. Your future. Find your study rhythm at Sanskar Library, a self-study space designed to help you prepare with confidence.</p>
+  <div class="hero-actions"><a class="btn" href="#contact">Enquire for a Seat <span>↗</span></a><a class="btn dark" href="#shifts">Explore Shifts ↓</a></div>
+  <div class="trust"><span><b class="check">✓</b> 24×7 access</span><span><b class="check">✓</b> Flexible shifts</span><span><b class="check">✓</b> Study-focused space</span></div>
+ </div>
+ <div class="hero-card">
+  <div class="photo"><div class="study-illustration"><div class="book">📚</div><strong>Your Study Space</strong><p>Quiet focus. Consistent progress.</p></div></div>
+  <div class="floating float-top"><b>24 × 7</b><small>Open all day</small></div>
+  <div class="floating float-bottom"><b>5 Flexible Shifts</b><small>Choose your routine</small></div>
+ </div>
+</div></section>
+<section class="section" id="facilities"><div class="wrap">
+ <div class="section-head"><div class="kicker">Why Sanskar Library</div><h2>Make every study hour count.</h2><p>A simple, welcoming environment where you can build a routine and focus on your next goal.</p></div>
+ <div class="features">
+  <article class="feature"><div class="feature-icon">🕒</div><h3>Open 24×7</h3><p>Plan your study time around your own schedule, day or night.</p></article>
+  <article class="feature"><div class="feature-icon">🎯</div><h3>Focus on your goals</h3><p>Settle into a dedicated self-study routine and make steady progress.</p></article>
+  <article class="feature"><div class="feature-icon">📅</div><h3>Flexible shifts</h3><p>Explore the available shift timings and ask the team about seat availability.</p></article>
+ </div>
+</div></section>
+<section class="section soft" id="shifts"><div class="wrap">
+ <div class="section-head"><div class="kicker">Plan your routine</div><h2>Study shifts</h2><p>Choose the time that suits your day. Contact the library to confirm seat availability and current fees.</p></div>
+ <div class="shifts">
+  <article class="shift"><div class="shift-no">01</div><div><h3>Morning Shift</h3><p>Start your day with focus</p><div class="time">6:00 AM – 10:00 AM</div></div></article>
+  <article class="shift"><div class="shift-no">02</div><div><h3>Day Shift</h3><p>Keep your momentum going</p><div class="time">10:00 AM – 2:00 PM</div></div></article>
+  <article class="shift"><div class="shift-no">03</div><div><h3>Afternoon Shift</h3><p>Make the afternoon count</p><div class="time">2:00 PM – 6:00 PM</div></div></article>
+  <article class="shift"><div class="shift-no">04</div><div><h3>Evening Shift</h3><p>Study after your day</p><div class="time">6:00 PM – 10:00 PM</div></div></article>
+  <article class="shift"><div class="shift-no">05</div><div><h3>Night Shift</h3><p>For your late-night routine</p><div class="time">10:00 PM – 6:00 AM</div></div></article>
+  <article class="shift"><div class="shift-no">24/7</div><div><h3>Need details?</h3><p>Ask about seats, fees and facilities.</p><div class="time"><a href="#contact">Contact the director ↗</a></div></div></article>
+ </div>
+</div></section>
+<section class="section" id="contact"><div class="wrap contact-grid">
+ <div class="contact-copy"><div class="kicker">Get in touch</div><h2>Ready to make space for your goals?</h2><p>Call us to ask about available seats, membership fees, facilities and the shift that fits you best.</p>
+  <div class="contact-line"><span class="ico">☎</span><div><small>Library enquiries</small><strong><a href="tel:9153821747">9153821747</a></strong></div></div>
+  <div class="contact-line"><span class="ico">👤</span><div><small>Director</small><strong>Indrajeet Sir</strong><br><a href="tel:8757262668">8757262668</a></div></div>
+  <div class="contact-line"><span class="ico">✉</span><div><small>Email</small><strong><a href="mailto:helpindrajeet@gmail.com">helpindrajeet@gmail.com</a></strong></div></div>
+ </div>
+ <form class="form-card" id="enquiryForm"><h3>Request a call back</h3><p>Fill in your details and send an enquiry through WhatsApp.</p>
+  <div class="field"><label for="name">Your name</label><input id="name" name="name" placeholder="Enter your name" required></div>
+  <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" inputmode="numeric" pattern="[0-9+() -]{8,16}" placeholder="Enter your phone number" required></div>
+  <div class="field"><label for="shift">Preferred shift</label><select id="shift" name="shift" required><option value="">Choose a shift</option><option>Morning · 6 AM–10 AM</option><option>Day · 10 AM–2 PM</option><option>Afternoon · 2 PM–6 PM</option><option>Evening · 6 PM–10 PM</option><option>Night · 10 PM–6 AM</option><option>Need help choosing</option></select></div>
+  <div class="field"><label for="message">Message (optional)</label><textarea id="message" name="message" placeholder="Ask about fees, seats or facilities"></textarea></div>
+  <button class="btn" type="submit">Send Enquiry on WhatsApp ↗</button><div class="note">Demo website: submitting opens WhatsApp with your enquiry. No information is stored on this demo page.</div>
+ </form>
+</div></section>
+</main>
+<footer><div class="wrap footer-row"><div><strong>संस्कार SANSKAR LIBRARY</strong><p>Self Study Center · Open 24×7</p></div><div class="footer-links"><a href="#facilities">Facilities</a><a href="#shifts">Shifts</a><a href="#contact">Contact</a></div><p>© <span id="year"></span> Sanskar Library. All rights reserved.</p></div></footer>
+<script>
+const menuBtn=document.getElementById('menuBtn'), nav=document.getElementById('navlinks');
+menuBtn.addEventListener('click',()=>{const opened=nav.style.display==='flex';nav.style.display=opened?'none':'flex';menuBtn.textContent=opened?'☰':'×';});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{if(innerWidth<=800){nav.style.display='none';menuBtn.textContent='☰';}}));
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('enquiryForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const name=document.getElementById('name').value.trim();
+ const phone=document.getElementById('phone').value.trim();
+ const shift=document.getElementById('shift').value;
+ const message=document.getElementById('message').value.trim();
+ const text=`Hello Sanskar Library! I would like to enquire about admission.\\nName: ${name}\\nPhone: ${phone}\\nPreferred shift: ${shift}\\nMessage: ${message||'Please share fees, facilities and seat availability.'}`;
+ window.open('https://wa.me/919153821747?text='+encodeURIComponent(text),'_blank','noopener');
+});
+</script>
+</body>
+</html>
